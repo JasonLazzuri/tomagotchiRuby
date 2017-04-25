@@ -1,5 +1,5 @@
 class Tamagotchi
-  # @@all_pets = []
+  @@all_pets = []
   define_method(:initialize) do |name|
     @name = name
     @food_level = 10
@@ -22,6 +22,10 @@ class Tamagotchi
   define_method(:activity_level) do
     @activity_level
   end
+  
+  define_singleton_method(:all) do
+    @@all_pets
+  end
 
   define_method(:is_alive) do
     @food_level>0
@@ -31,9 +35,11 @@ class Tamagotchi
     @food_level = level
   end
 
-  define_method(:time_passes) do
-    @food_level -=1
-    sleep 3
+  define_method(:save) do
+    @@all_pets.push(self)
+  end
 
+  define_method(:time_passes) do
+    @food_level -= 1
   end
 end
