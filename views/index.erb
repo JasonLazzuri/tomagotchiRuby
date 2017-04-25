@@ -1,19 +1,31 @@
-<h1>Best. Places. Ever!</h1>
+<h1>Tamagotchi</h1>
 
-<p>Here are all your places:</p>
+<p></p>
 
-<ul>
+<% if false %>
+<!-- <ul>
   <% @places.each() do |place| %>
     <li><%= place.name() %></li>
   <% end %>
+</ul> -->
+<% end %>
+<h2>Your Tamagotchi's health:</h2>
+<ul>
+  <li>Food:<%= @food_level %></li>
+  <li>Sleep:<%= @sleep_level %></li>
+  <li>Play:<%= @activity_level %></li>
 </ul>
 
-<p>Where else have you been?</p>
+
+<p>Help feed, sleep, and keep alive your Tamagotchi!</p>
 
 <form action="/tamagtochi" method="post">
+
   <label for="name"> What does your Tamagotchi need?</label>
-
-
+  <button type="submit">Sleep!</button>
+  <button type="submit">Play!</button>
   <button type="submit">Food!</button>
 
 </form>
+
+<img src="http://old.computerra.ru/pubimages/78659.gif">
