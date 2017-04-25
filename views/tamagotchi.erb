@@ -1,0 +1,31 @@
+<h1><%= @name %></h1>
+
+<p></p>
+
+<% if false %>
+<!-- <ul>
+  <% @places.each() do |place| %>
+    <li><%= place.name() %></li>
+  <% end %>
+</ul> -->
+<% end %>
+<h2><%= @name %>'s health:</h2>
+<ul>
+  <li>Food:<%= @food_level %></li>
+  <li>Sleep:<%= @sleep_level %></li>
+  <li>Play:<%= @activity_level %></li>
+</ul>
+
+
+<p>Help feed, sleep, and keep alive your Tamagotchi!</p>
+
+<form action="/tamagtochi" method="post">
+
+  <label for="name"> What does your Tamagotchi need?</label><br>
+  <button type="submit">Sleep!</button>
+  <button type="submit">Play!</button>
+  <button type="submit">Food!</button>
+
+</form>
+<br>
+<img src="http://old.computerra.ru/pubimages/78659.gif">
